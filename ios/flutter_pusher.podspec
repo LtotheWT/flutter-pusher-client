@@ -4,11 +4,11 @@
 require 'yaml'
 pubspec = YAML.load_file(File.join('..', 'pubspec.yaml'))
 libraryVersion = pubspec['version'].gsub('+', '-')
-pusherLibraryVersion = '~> 7.2'
+pusherLibraryVersion = '7.2.0'
 
 Pod::Spec.new do |s|
   s.name             = 'flutter_pusher_client'
-  s.version          = '0.1.0'
+  s.version          = libraryVersion
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC
 A new flutter plugin project.
